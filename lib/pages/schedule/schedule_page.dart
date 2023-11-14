@@ -26,7 +26,6 @@ class _SchedulePageState extends State<SchedulePage> {
           const Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Text("Schedule", style: TextStyle(color: Colors.grey)),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
