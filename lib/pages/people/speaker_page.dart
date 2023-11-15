@@ -22,7 +22,7 @@ class KeynoteSpeakerPage extends StatelessWidget {
               Container(
                 height: contentHeight > width ? width * 0.8 : contentHeight,
                 width: width > 500 ? 500 : width * 0.8,
-                margin: EdgeInsets.only(top: 30.0),
+                margin: const EdgeInsets.only(top: 30.0),
                 child: Center(
                   child: ClipOval(
                     child: Image.asset(suneth),
@@ -58,7 +58,7 @@ class KeynoteSpeakerPage extends StatelessWidget {
             ],
           ),
           Container(
-            width: width > 1000 ? 1000 : width * 0.8,
+            width: width > 1000 ? 1000 : width * 0.9,
             margin: const EdgeInsets.symmetric(
               vertical: 30.0,
               horizontal: 20.0,
