@@ -3,6 +3,7 @@ import 'package:industrio_2023/constants.dart';
 import 'package:industrio_2023/models/responsive_layout.dart';
 import 'package:industrio_2023/pages/people/hover_button.dart';
 import 'package:industrio_2023/pages/people/organizing_commitee.dart';
+import 'package:industrio_2023/pages/people/speaker_page.dart';
 import 'package:industrio_2023/pages/people/sub_headings.dart';
 import 'package:industrio_2023/pages/widgets/common_page.dart';
 
@@ -19,25 +20,28 @@ class PeoplesPage extends StatelessWidget {
         children: [
           const SubHeadings('Our Speaker'),
           HoverButton(
-            onTap: () {},
+            onTap: () {
+              Navigator.pushNamed(context, KeynoteSpeakerPage.route);
+            },
             body: SizedBox(
               width: width * 0.8 > 400.0 ? 400.0 : width * 0.8,
               child: Column(
                 children: [
                   const Padding(
                     padding: EdgeInsets.all(20.0),
-                    child: Image(
-                      width: 200,
-                      height: 200,
-                      fit: BoxFit.fitWidth,
-                      alignment: Alignment.topCenter,
-                      image: NetworkImage(
-                          'https://www.seekpng.com/png/full/110-1100707_person-avatar-placeholder.png'),
+                    child: ClipOval(
+                      child: Image(
+                        width: 200,
+                        height: 200,
+                        fit: BoxFit.fitWidth,
+                        alignment: Alignment.topCenter,
+                        image: AssetImage(suneth),
+                      ),
                     ),
                   ),
                   FittedBox(
                     child: Text(
-                      'Prof. Gamini Dissanayake',
+                      'Mr. Suneth Kotuthenne',
                       style: textTheme.titleLarge?.copyWith(
                         fontWeight: FontWeight.bold,
                       ),
@@ -46,7 +50,8 @@ class PeoplesPage extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(20.0),
                     child: Text(
-                      'CEO of Abans Electricals PLC',
+                      'Supply Chain Director at Hemas Pharmaceuticals/Surgical'
+                      ' & Diagnostics (Pvt) Ltd.',
                       style: textTheme.bodyMedium?.copyWith(
                         color: colorScheme.secondary,
                       ),
