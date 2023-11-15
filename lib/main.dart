@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:industrio_2023/pages/home/home_page.dart';
+import 'package:industrio_2023/pages/people/speaker_page.dart';
 
 import 'pages/projects/projects_page.dart';
 
@@ -60,6 +61,7 @@ class MyApp extends StatelessWidget {
         PostersPage.route: (context) => const PostersPage(),
         ProceedingPage.route: (context) => const ProceedingPage(),
         OrganizingCommitee.route: (context) => const OrganizingCommitee(),
+        KeynoteSpeakerPage.route: (context) => const KeynoteSpeakerPage(),
       },
     );
   }

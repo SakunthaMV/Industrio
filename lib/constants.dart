@@ -12,6 +12,8 @@ const String homeBackground = 'images/home_background.jpg';
 const String home_1 = 'images/home_1.jpg';
 const String home_2 = 'images/home_2.jpg';
 const String oc = 'images/oc.png';
+const String suneth = 'images/suneth.jpg';
+const String headingBackground = 'images/heading_background.jpg';
 
 // Menu
 const List<String> menuItems = [
