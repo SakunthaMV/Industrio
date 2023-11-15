@@ -9,6 +9,8 @@ import 'package:industrio_2023/pages/schedule/schedule_page.dart';
 // Images
 const String logo = 'images/logo.png';
 const String homeBackground = 'images/home_background.jpg';
+const String home_1 = 'images/home_1.jpg';
+const String home_2 = 'images/home_2.jpg';
 const String oc = 'images/oc.png';
 
 // Menu
@@ -48,6 +50,22 @@ const int noOfImages = 5;
 
 // App Bar
 const double appBarHeight = 100.0;
+
+// Home Content
+const double contentHeight = 350.0;
+const String whatIsIndustrio =
+    'INDUSTRIO is the project symposium of the Department of '
+    'Manufacturing and Industrial Engineering of University of '
+    'Peradeniya. It presents the projects of the final year '
+    'undergraduates of the department and gives valuable '
+    'opportunities to share and gain knowledge from industry.';
+const String ourTheme =
+    'The sustainable concept is one of the leading concepts '
+    'in modern industry and the world. This year we will discuss about '
+    'how Manufacturing & Industrial engineers contribute to the sustainable '
+    'transformation of the industry. Research projects will be presented '
+    'under manufacturing engineering, manufacturing automation, '
+    'logistics & supply chain, and life cycle assessment & management.';
 
 // Department Details
 const List<dynamic> dmieDetails = [
