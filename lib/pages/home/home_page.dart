@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:industrio_2023/constants.dart';
 import 'package:industrio_2023/models/responsive_layout.dart';
 import 'package:industrio_2023/pages/home/home_content.dart';
-// import 'package:industrio_2023/pages/home/slideshow.dart';
 import 'package:industrio_2023/pages/widgets/custom_appbar.dart';
 import 'package:industrio_2023/pages/widgets/common_footer.dart';
 import 'package:industrio_2023/pages/widgets/nav_drawer.dart';
@@ -21,7 +20,6 @@ class HomePage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            // SlideShow(),
             Stack(
               alignment: AlignmentDirectional.center,
               children: [
@@ -30,7 +28,11 @@ class HomePage extends StatelessWidget {
                     bottomLeft: Radius.circular(50.0),
                     bottomRight: Radius.circular(50.0),
                   ),
-                  child: Image.asset(homeBackground),
+                  child: ResponsiveLayout(
+                    desktop: Image.asset(homeBackground),
+                    tablet: Image.asset(homeBackground),
+                    mobile: Image.asset(homeBackgroundMobile),
+                  ),
                 ),
                 SizedBox(
                   width: width * 0.8,
@@ -40,6 +42,7 @@ class HomePage extends StatelessWidget {
                       text: TextSpan(
                         style: textTheme.displayLarge!.copyWith(
                           color: colorScheme.secondary,
+                          height: 1.5,
                         ),
                         children: [
                           const TextSpan(
@@ -52,8 +55,9 @@ class HomePage extends StatelessWidget {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          const TextSpan(
-                            text: ' Where Ideas Turn into ',
+                          TextSpan(
+                            text:
+                                '${width < 525 ? '\n' : ' '}Where Ideas Turn into ',
                           ),
                           TextSpan(
                             text: 'Solutions,',

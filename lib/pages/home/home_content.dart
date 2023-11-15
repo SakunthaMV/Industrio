@@ -73,7 +73,7 @@ class HomeContent extends StatelessWidget {
     final double width = MediaQuery.of(context).size.width;
     final TextTheme textTheme = Theme.of(context).textTheme;
     return Container(
-      height: contentHeight,
+      height: width > 500 ? contentHeight : 500 * contentHeight / width,
       width: width > 600 ? 600 : width * 0.8,
       margin:
           EdgeInsets.symmetric(horizontal: width > 600 ? width * 0.05 : 0.0),
