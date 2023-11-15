@@ -19,6 +19,10 @@ class CommonHeader extends StatelessWidget {
             colorScheme.secondary,
           ],
         ),
+        borderRadius: const BorderRadius.only(
+          bottomLeft: Radius.circular(20.0),
+          bottomRight: Radius.circular(20.0),
+        ),
       ),
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 30.0),
