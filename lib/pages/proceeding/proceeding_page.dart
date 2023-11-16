@@ -3,7 +3,7 @@ import 'package:industrio_2023/constants.dart';
 import 'package:industrio_2023/pages/widgets/common_page.dart';
 
 class ProceedingPage extends StatelessWidget {
-  static const String route = 'Proceeding';
+  static const String route = 'Proceedings';
   const ProceedingPage({super.key});
 
   @override
