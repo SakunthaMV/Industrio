@@ -24,7 +24,10 @@ class ProceedingPage extends StatelessWidget {
             SizedBox(
               width: 500,
               child: Center(
-                child: Image.asset(proceedingCover),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(25.0),
+                  child: Image.asset(proceedingCover),
+                ),
               ),
             ),
             SizedBox(
