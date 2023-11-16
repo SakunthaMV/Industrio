@@ -14,6 +14,7 @@ const String home_2 = 'images/home_2.jpg';
 const String oc = 'images/oc.png';
 const String suneth = 'images/suneth.jpg';
 const String headingBackground = 'images/heading_background.jpg';
+const String proceedingCover = 'images/proceeding_cover.jpg';
 
 // Menu
 const List<String> menuItems = [
@@ -93,6 +94,14 @@ String speakerDetails =
     '\n${' ' * 10}His extensive knowledge and leadership roles in various '
     'organizations, along with his dedication to education and industry '
     'collaboration, make him a valuable asset.';
+
+// Proceeding Details
+const String proceedingsDetails =
+    'INDUSTRIO is the project symposium of the Department of Manufacturing '
+    'and Industrial Engineering of University of Peradeniya. It presents the '
+    'projects of the final year undergraduates of the department and gives '
+    'valuable opportunities to share and gain knowledge from industry '
+    'and academic experts.';
 
 // Department Details
 const List<dynamic> dmieDetails = [
