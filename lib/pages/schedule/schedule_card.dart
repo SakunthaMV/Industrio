@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
 
-Widget scheduleCard() {
+Widget scheduleCard(
+    {required String title, required String name, required String position}) {
   return Container(
     width: 350,
     height: 250,
     padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
     decoration: const BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(5)), color: Colors.blue),
+        borderRadius: BorderRadius.all(Radius.circular(5)),
+        color: Color.fromARGB(255, 123, 132, 231)),
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         timeCard(),
-        const Text(
-          "Keynote Speech",
-          style: TextStyle(
+        Text(
+          title,
+          style: const TextStyle(
               color: Colors.white, fontSize: 25, fontWeight: FontWeight.bold),
         ),
         const SizedBox(height: 10),
@@ -22,15 +24,15 @@ Widget scheduleCard() {
           style: TextStyle(color: Colors.white),
         ),
         const SizedBox(height: 10),
-        const Text(
-          "Prof. Gamini Dissanayake",
-          style: TextStyle(
+        Text(
+          name,
+          style: const TextStyle(
               color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
         ),
         const SizedBox(height: 10),
-        const Text(
-          "Vice President of MEA",
-          style: TextStyle(color: Colors.white),
+        Text(
+          position,
+          style: const TextStyle(color: Colors.white),
         ),
       ],
     ),
