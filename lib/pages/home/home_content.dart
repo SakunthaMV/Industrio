@@ -74,7 +74,7 @@ class HomeContent extends StatelessWidget {
     final TextTheme textTheme = Theme.of(context).textTheme;
     return Container(
       height: width > 500 ? contentHeight : 500 * contentHeight / width,
-      width: width > 600 ? 600 : width * 0.8,
+      width: width > 600 ? 600 : width * 0.9,
       margin:
           EdgeInsets.symmetric(horizontal: width > 600 ? width * 0.05 : 0.0),
       child: Column(

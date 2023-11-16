@@ -59,7 +59,6 @@ class CommonFooter extends StatelessWidget {
           ),
           ResponsiveLayout(
             desktop: usefulLinks(context),
-            tablet: usefulLinks(context),
           ),
           ...List.generate(2, (index) {
             const List<String> footerData = [

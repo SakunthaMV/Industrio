@@ -8,7 +8,6 @@ import 'pages/projects/projects_page.dart';
 
 import 'package:industrio_2023/pages/people/organizing_commitee.dart';
 import 'package:industrio_2023/pages/people/people_page.dart';
-import 'package:industrio_2023/pages/posters/posters_page.dart';
 import 'package:industrio_2023/pages/proceeding/proceeding_page.dart';
 import 'package:industrio_2023/pages/schedule/schedule_page.dart';
 
@@ -58,7 +57,6 @@ class MyApp extends StatelessWidget {
         SchedulePage.route: (context) => const SchedulePage(),
         PeoplesPage.route: (context) => const PeoplesPage(),
         ProjectPage.route: (context) => const ProjectPage(),
-        PostersPage.route: (context) => const PostersPage(),
         ProceedingPage.route: (context) => const ProceedingPage(),
         OrganizingCommitee.route: (context) => const OrganizingCommitee(),
         KeynoteSpeakerPage.route: (context) => const KeynoteSpeakerPage(),
