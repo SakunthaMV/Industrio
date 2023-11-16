@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:industrio_2023/constants.dart';
+import 'package:industrio_2023/models/responsive_layout.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class CommonFooter extends StatelessWidget {
@@ -44,7 +45,7 @@ class CommonFooter extends StatelessWidget {
                   icon: Icon(
                     dmieDetails[index][1],
                     size: 35,
-                    color: colorScheme.secondary,
+                    color: colorScheme.tertiary,
                   ),
                   onPressed: () async {
                     externalLink(dmieDetails[index][2]);
@@ -56,33 +57,8 @@ class CommonFooter extends StatelessWidget {
               }),
             ),
           ),
-          Text(
-            'Useful Links',
-            style: textTheme.headlineLarge?.copyWith(
-              color: colorScheme.onPrimary,
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 30.0),
-            child: Wrap(
-              crossAxisAlignment: WrapCrossAlignment.center,
-              alignment: WrapAlignment.center,
-              spacing: 100,
-              runSpacing: 20,
-              children: List.generate(linkDetails.length, (index) {
-                return SizedBox(
-                  width: 100,
-                  height: 100,
-                  child: IconButton(
-                    hoverColor: colorScheme.secondary.withOpacity(0.25),
-                    icon: Image.asset(linkDetails[index][0]),
-                    onPressed: () {
-                      externalLink(linkDetails[index][1]);
-                    },
-                  ),
-                );
-              }),
-            ),
+          ResponsiveLayout(
+            desktop: usefulLinks(context),
           ),
           ...List.generate(2, (index) {
             const List<String> footerData = [
@@ -112,5 +88,42 @@ class CommonFooter extends StatelessWidget {
     } else {
       toast('Something Went Wrong. Please Try Again');
     }
+  }
+
+  Widget usefulLinks(BuildContext context) {
+    final TextTheme textTheme = Theme.of(context).textTheme;
+    final ColorScheme colorScheme = Theme.of(context).colorScheme;
+    return Column(
+      children: [
+        Text(
+          'Useful Links',
+          style: textTheme.headlineLarge?.copyWith(
+            color: colorScheme.onPrimary,
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 30.0),
+          child: Wrap(
+            crossAxisAlignment: WrapCrossAlignment.center,
+            alignment: WrapAlignment.center,
+            spacing: 100,
+            runSpacing: 20,
+            children: List.generate(linkDetails.length, (index) {
+              return SizedBox(
+                width: 100,
+                height: 100,
+                child: IconButton(
+                  hoverColor: colorScheme.secondary.withOpacity(0.25),
+                  icon: Image.asset(linkDetails[index][0]),
+                  onPressed: () {
+                    externalLink(linkDetails[index][1]);
+                  },
+                ),
+              );
+            }),
+          ),
+        ),
+      ],
+    );
   }
 }

@@ -23,34 +23,10 @@ class _SchedulePageState extends State<SchedulePage> {
             ? CrossAxisAlignment.center
             : CrossAxisAlignment.start,
         children: [
-          const Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Text("Schedule", style: TextStyle(color: Colors.grey)),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text("Event",
-                      style: TextStyle(
-                          fontSize: 25,
-                          fontWeight: FontWeight.bold,
-                          color: Color.fromARGB(255, 105, 243, 240))),
-                  SizedBox(width: 10),
-                  Text(
-                    "Schedule",
-                    style: TextStyle(
-                        fontSize: 25,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.blue),
-                  )
-                ],
-              ),
-            ],
-          ),
           SizedBox(
-            height: size.height * 0.9,
+            height: 250 * 11,
             child: Timeline.tileBuilder(
-              shrinkWrap: true,
+              shrinkWrap: false,
               builder: TimelineTileBuilder.connectedFromStyle(
                 connectionDirection: ConnectionDirection.before,
                 indicatorStyleBuilder: (context, index) =>
@@ -62,7 +38,10 @@ class _SchedulePageState extends State<SchedulePage> {
                     : ContentsAlign.basic,
                 contentsBuilder: (context, index) => Padding(
                   padding: const EdgeInsets.all(10.0),
-                  child: scheduleCard(),
+                  child: scheduleCard(
+                      title: "Keynote Speech",
+                      name: "Mr. Suneth Kotuthane",
+                      position: "Engineer at Ansell Lanka Pvt Ltd"),
                 ),
                 nodePositionBuilder: (context, index) =>
                     size.width > 650 ? 0.5 : 0.02,

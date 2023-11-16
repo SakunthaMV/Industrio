@@ -26,7 +26,7 @@ Widget projectCard(BuildContext context) {
 Widget customButton(BuildContext context) {
   return ElevatedButton(
     onPressed: () {
-      Navigator.of(context).pushNamed(ProjectItem.route);
+      Navigator.of(context).pushNamed(ProjectItem.routeName);
     },
     style: ElevatedButton.styleFrom(
       backgroundColor: const Color(0xff29467C),
